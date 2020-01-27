@@ -1,28 +1,28 @@
-<form class="container">
-<div>
+<form [formGroup]="userFormGroup"  class="container">
+<div class="formGroup">
   <nav class="nav">
             <div class="d1">
                <h3 class="h3">facebook</h3>
             </div>
         </nav>
         <br>
-        <div>
+        <div class="formGroup">
           <label class="lbl">Create an account</label>
           <br>
           It's quick & easy
         </div>
         <br>
-        <div>
-            <input type="text" placeholder="First Name">&nbsp;
-            <input type="text" placeholder="Last Name">
+        <div class="formGroup">
+            <input type="text" formControlName="fullName" class="form-control"   placeholder="First Name">&nbsp;
+            <input type="text" formControlName="lastname" class="form-control"  placeholder="Last Name">
         </div><br>
-        <div>
-            <input size="45" placeholder="Mobile No or Email address" required>
+        <div class="formGroup">
+            <input size="45" formControlName="email" class="form-control"   placeholder="Mobile No or Email address" required>
         </div><br>
-        <div>
-            <input type="text" placeholder="New Password">
+        <div class="formGroup">
+            <input type="text" formControlName="password" class="form-control"  placeholder="New Password">
         </div><br>
-        <div>
+        <div class="formGroup">
             <label class=lbl1>Birthday</label>
             <br>
             <select>
@@ -69,21 +69,21 @@
                 <option>2022</option>
             </select>
         </div><br>
-        <div>
+        <div class="formGroup">
             <label class="lbl1">Gender</label>
             <br>
-            <input type="radio" name="gender" value="Male"> Male
-            <input type="radio" name="gender" value="Female"> Female
-            <input type="radio" name="gender" value="Other"> Other
+            <input type="radio" formControlName="gender" class="form-control"   name="gender" value="Male"> Male
+            <input type="radio" formControlName="gender" class="form-control"   name="gender" value="Female"> Female
+            <input type="radio" formControlName="gender" class="form-control"   name="gender" value="Other"> Other
         </div><br>
-        <div>
+        <div class="formGroup">
             <label>
                 By clicking Sign Up, you agree to our <span class="span">Terms, Data Policy</span> and <span class="span"> Policy</span>. You may receive
                 SMS notifications from us and can opt out at any time
             </label>
         </div><br>
-        <div>
-            <button class="submit">Sign Up</button>
+        <div class="formGroup">
+            <button [disabled]="userFormGroup.invalid"  class="submit" (click)="submit()">Sign Up</button>
         </div>
 </div>
 </form>
