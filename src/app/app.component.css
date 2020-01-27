@@ -1,0 +1,35 @@
+.nav
+{
+    background-color:#29487d;
+    height: 50px;
+}
+.h3
+{
+  color: white;
+  font-size: 30px;
+  padding-top: 10px;
+}
+.lbl
+{
+  font-size: 25px;
+  font-weight: bold;
+}
+.lbl1
+{
+  color: grey;
+}
+.span
+{
+  color: blue;
+}
+.submit
+{
+  background-color: rgb(15, 139, 15) ;
+  border-color:black;
+  border-width: 1px;
+  width: 170px;
+  height: 30px;
+  border-radius:5px;  
+  color: white;
+  font-size: 20px;
+}
